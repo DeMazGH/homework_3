@@ -2,9 +2,11 @@ public class Main {
     public static void main(String[] args) {
         task1();
         task2();
+        task3();
     }
 
     public static void task1() {
+
         int clientOs = 0;
 
         switch (clientOs) {
@@ -20,6 +22,7 @@ public class Main {
     }
 
     public static void task2() {
+
         int clientOs = 1;
         int clientYear = 2011;
 
@@ -40,6 +43,19 @@ public class Main {
         if (isAndroid && !isPhoneOld) {
             System.out.println("«Установите версию приложения для Android по ссылке».");
         }
+        System.out.println();
+    }
 
+    public static void task3() {
+
+        int year = 2022;
+
+        if (((year % 100) == 0) && ((year % 400) != 0)) {
+            System.out.println(year + "« год не является високосным».\n");
+        } else if ((year % 4) == 0) {
+            System.out.println(year + "« год является високосным».\n");
+        } else {
+            System.out.println(year + "« год не является високосным».\n");
+        }
     }
 }
