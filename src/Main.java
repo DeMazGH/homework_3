@@ -61,11 +61,11 @@ public class Main {
         int deliveryDistance = 95;
         int deliveryDays = 1;
 
-        if (deliveryDistance > 60) {
+        if (deliveryDistance > 20) {
             deliveryDays++;
         }
 
-        if (deliveryDistance > 100) {
+        if (deliveryDistance > 60) {
             deliveryDays++;
         }
 
