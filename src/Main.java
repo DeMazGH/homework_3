@@ -61,12 +61,12 @@ public class Main {
         int deliveryDistance = 95;
         int deliveryDays = 1;
 
-        if (deliveryDistance <= 20) {
-            deliveryDays = 1;
-        } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
-            deliveryDays = 2;
-        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
-            deliveryDays = 3;
+        if (deliveryDistance > 60) {
+            deliveryDays++;
+        }
+
+        if (deliveryDistance > 100) {
+            deliveryDays++;
         }
 
         if (deliveryDistance <= 100) {
