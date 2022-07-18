@@ -1,6 +1,9 @@
 public class Main {
     public static void main(String[] args) {
-        task1();
+
+        int clientOs = 0;
+
+        task1(clientOs);
         task2();
         task3();
         task4();
@@ -9,9 +12,7 @@ public class Main {
         task7();
     }
 
-    public static void task1() {
-
-        int clientOs = 0;
+    public static void task1(int clientOs) {
 
         switch (clientOs) {
             case 0:
@@ -49,10 +50,10 @@ public class Main {
 
         int year = 2022;
 
-        if ((((year % 100) == 0) && ((year % 400) != 0)) || ((year % 4) != 0)) {
-            System.out.println(year + " год не является високосным.\n");
-        } else {
+        if ((((year % 4) == 0) && ((year % 100) != 0)) || ((year % 400) == 0)) {
             System.out.println(year + " год является високосным.\n");
+        } else {
+            System.out.println(year + " год не является високосным.\n");
         }
     }
 
@@ -61,16 +62,12 @@ public class Main {
         int deliveryDistance = 95;
         int deliveryDays = 1;
 
-        if (deliveryDistance > 20) {
-            deliveryDays++;
-        }
-
-        if (deliveryDistance > 60) {
-            deliveryDays++;
-        }
-
-        if (deliveryDistance <= 100) {
+        if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: " + deliveryDays + "\n");
+        } else if (deliveryDistance <= 60) {
+            System.out.println("Потребуется дней: " + (deliveryDays + 1) + "\n");
+        } else if (deliveryDistance <= 100) {
+            System.out.println("Потребуется дней: " + (deliveryDays + 2) + "\n");
         } else {
             System.out.println("Срок доставки более 3 дней!\n");
         }
